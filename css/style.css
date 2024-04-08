@@ -1,0 +1,24 @@
+nav{
+    display: grid;
+    text-align: center;
+}
+.item_center{
+    display: grid;
+    align-items: center;
+}
+.marginSpace-x{
+    margin: 0 3px;
+}
+.marginSpace-y{
+    margin: 4px;
+}
+
+.bg_color-BlueLight{
+    background-color: #89d4f0;
+}
+.bg_color-Yellow{
+    background-color: #ffe189;
+}
+.bg_color-GreenLight{
+    background-color: #92d050;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Bellic">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <title>Lista de Tareas</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="text-center text-light py-4 bg-dark">KANBAN</h1>
+        </header>
+
+        <nav class="px-4">
+            <ul>
+                <form action="#" method="POST">
+                    <input type="submit" value="ADD TASK" class="btn btn-outline-success marginSpace-x marginSpace-y">
+                    <input type="submit" value="DELETE TASK" class="btn btn-outline-danger marginSpace-x marginSpace-y">
+                    <input type="submit" value="MODIFY" class="btn btn-outline-warning marginSpace-x marginSpace-y">
+                    <input type="submit" value="NEXT PHASE" class="btn btn-outline-primary marginSpace-x marginSpace-y">
+                </form>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="row mx-2">
+                <article class="col-4">
+                    <div class="border border-2 border-dark rounded">
+                        <header class="bg_color-BlueLight rounded-top">
+                            <h3 class="text-center pt-2">TO DO</h3>
+                            <hr class="border-2 opacity-100">
+                        </header>
+                    </div>
+                </article>
+                <article class="col-4">
+                    <div class="border border-2 border-dark rounded">
+                        <header class="bg_color-Yellow rounded-top">
+                            <h3 class="text-center pt-2">DOING</h3>
+                            <hr class="border-2 opacity-100">
+                        </header>
+                    </div>
+                </article>
+                <article class="col-4">
+                    <div class="border border-2 border-dark rounded">
+                        <header class="bg_color-GreenLight rounded-top">
+                            <h3 class="text-center pt-2">DONE</h3>
+                            <hr class="border-2 opacity-100">
+                        </header>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>
