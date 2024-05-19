@@ -15,8 +15,11 @@
 
         <nav class="px-4">
             <ul>
-                <form action="#" method="POST">
-                    <input type="submit" value="ADD TASK" class="btn btn-outline-success marginSpace-x marginSpace-y">
+                <div class="d-flex justify-content-center">
+                    <input type="text" id="task" class="form-control w-50">
+                </div>
+                <form id="formCards">
+                    <button id="addCard" class="btn btn-outline-success marginSpace-x marginSpace-y">ADD TASK</button>
                     <input type="submit" value="DELETE TASK" class="btn btn-outline-danger marginSpace-x marginSpace-y">
                     <input type="submit" value="MODIFY" class="btn btn-outline-warning marginSpace-x marginSpace-y">
                     <input type="submit" value="NEXT PHASE" class="btn btn-outline-primary marginSpace-x marginSpace-y">
@@ -32,6 +35,8 @@
                             <h3 class="text-center pt-2">TO DO</h3>
                             <hr class="border-2 opacity-100">
                         </header>
+                        <div id="taskAdd" class="">
+                        </div>
                     </div>
                 </article>
                 <article class="col-4">
@@ -52,5 +57,6 @@
                 </article>
             </div>
         </main>
+        <script src="js/app.js"></script>
     </body>
 </html>

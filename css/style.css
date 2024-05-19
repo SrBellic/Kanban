@@ -2,6 +2,16 @@ nav{
     display: grid;
     text-align: center;
 }
+
+.font{
+    font-size: 14px;
+}
+
+.scroll {
+    max-height: 356px; 
+    overflow-y: auto; 
+}
+
 .item_center{
     display: grid;
     align-items: center;
