@@ -1,9 +1,15 @@
 let addCard = document.getElementById('addCard');
-
 document.querySelector('#taskAdd').classList.add('scroll');
+let idCard = 0;
+
+let nextButton = document.getElementById('nextButton');
+document.querySelector('#taskDoing').classList.add('scroll');
 
 addCard.addEventListener('click', (e) => {
+    //función para prevenir errores
     e.preventDefault();
+    //Contador para aumentar los IDs de las tarjetas
+    idCard++;
 
     // Obtener el valor del campo de entrada de texto, evalua el texto del input
     const task = document.getElementById('task').value.toUpperCase();
@@ -12,6 +18,7 @@ addCard.addEventListener('click', (e) => {
     let newCard = document.createElement('article');
     newCard.classList.add('container', 'my-2');
     document.querySelector('#taskAdd').appendChild(newCard);
+    newCard.setAttribute('id',`card${idCard}`);
 
     // Encabezado de la tarjeta
     let headerCard = document.createElement('header');
@@ -24,13 +31,16 @@ addCard.addEventListener('click', (e) => {
     taskName.textContent = task; // Asignar el nombre de la tarea
     headerCard.appendChild(taskName);
 
+    //Cuerpo de la tarjeta
     let bodyCard = document.createElement('div');
     newCard.appendChild(bodyCard);
 
+    //Textarea donde se escribirá la descripción de la tarea
     let bodyText = document.createElement('textarea');
     bodyCard.appendChild(bodyText);
     bodyText.style.resize = 'none';
     bodyText.style.width = '100%';
+    bodyText.style.border = 'none'
     bodyText.classList.add('rounded', 'mb-3','font')
     bodyText.setAttribute('rows','4');
 
@@ -38,3 +48,9 @@ addCard.addEventListener('click', (e) => {
     bodyCard.appendChild(hr)
 
 });
+
+nextButton.addEventListener('click',(e)=>{
+    e.preventDefault();
+
+    const next = document.getElementById(`card${idCard}`).value.toUpperCase();
+})
