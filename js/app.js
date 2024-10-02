@@ -49,6 +49,7 @@ addCard.addEventListener("click", (e) => {
   bodyCard.appendChild(hr);
 });
 
+//43:57
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -57,7 +58,7 @@ nextButton.addEventListener("click", (e) => {
   const nextText = document.getElementById(`textarea${idCard}`).value;
 
   let nextCard = document.createElement("article");
-  nextCard.classList.add("container", "my-2");
+  nextCard.classList.add("container", "my-2", "doing");
   nextCard.setAttribute("id", `card${idCard}`);
   document.querySelector("#taskDoing").appendChild(nextCard);
 
@@ -65,7 +66,25 @@ nextButton.addEventListener("click", (e) => {
 
   nextCard.querySelector("textarea").value = nextText;
   //Borra las tarjetas viejas
-  next.remove();
+  //next.remove();
 
-  console.log(nextCard);
+  if (nextCard.classList.contains("done")) {
+    const done = document.getElementById(`card${idCard}`);
+
+    const doneText = document.getElementById(`textarea${idCard}`).value;
+
+    const doneCard = document.createElement("article");
+    doneCard.classList.remove("done");
+    doneCard.setAttribute("id", `done${idCard}`);
+
+    document.querySelector("#taskDone").appendChild(nextCard);
+
+    doneCard.innerHTML = done.innerHTML;
+
+    doneCard.querySelector("textarea").value = doneText;
+    //Borra las tarjetas viejas
+    done.remove();
+  }
+
+  console.log(doneCard);
 });
